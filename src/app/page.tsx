@@ -1,48 +1,33 @@
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <>
-      {/*
-  Heads up! 👋
+    <div className="flex flex-col justify-center items-center w-full h-screen">
+      <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+          Welcome to ThinkFast!
+        </h2>
+        <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+          Ready to test your brainpower? ThinkFast is the ultimate quiz app
+          where speed meets knowledge. Challenge yourself with rapid-fire
+          questions, beat the clock, and outsmart your friends. Get your mind
+          racing and see if you have what it takes to claim the top spot!
+        </p>
+      </BackgroundLines>
 
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-*/}
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <Link href="/dashboard">
+          <Button size={"lg"}>Get Started</Button>
+        </Link>
 
-      <section className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
-
-        <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h1 className="text-3xl font-extrabold text-white sm:text-5xl">
-              Let us find your
-              <strong className="block font-extrabold text-rose-500">
-                {" "}
-                Forever Home.{" "}
-              </strong>
-            </h1>
-
-            <p className="mt-4 max-w-lg text-white sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4 text-center">
-              <a
-                href="#"
-                className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
-              >
-                Get Started
-              </a>
-
-              <a
-                href="#"
-                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+        <Link href="/about">
+          <Button size={"lg"} variant={"outline"}>
+            Learn More
+          </Button>
+        </Link>
+      </div>
+    </div>
   );
 }

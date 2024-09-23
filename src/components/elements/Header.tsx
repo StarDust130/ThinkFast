@@ -11,11 +11,10 @@ import {
   SheetTrigger,
   SheetClose, // Import SheetClose
 } from "@/components/ui/sheet";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-4 py-3  ">
+    <header className="flex justify-between items-center px-4 py-3 z-50  ">
       {/* Logo */}
       <div className="flex items-center">
         <Logo />
@@ -46,7 +45,7 @@ const Header = () => {
       {/* Right side */}
       <div className="flex items-center gap-5">
         {/* Show on large screens */}
-       
+
         <div className="hidden md:flex gap-2">
           <Link href="/login">
             <Button>Login</Button>
