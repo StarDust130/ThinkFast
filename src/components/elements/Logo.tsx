@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href={"/"} className="flex justify-center items-center">
+    <Link href={"/"} className="flex justify-center items-center mx-auto">
       <Image src="/logo.png" alt="logo" width={40} height={40} />
       <p className="font-bold md:text-lg">Think Fast</p>
     </Link>

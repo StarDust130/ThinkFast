@@ -3,6 +3,7 @@ import { Stardos_Stencil } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/elements/theme-provider";
 import Header from "@/components/elements/Header";
+import Footer from "@/components/elements/Footer";
 
 const fredericka = Stardos_Stencil({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <main className="h-screen w-full">
             <Header />
             {children}
+            <Footer />
           </main>
         </ThemeProvider>
       </body>
