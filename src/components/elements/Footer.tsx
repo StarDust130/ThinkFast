@@ -17,9 +17,9 @@ const Footer = () => {
             © {new Date().getFullYear()}{" "}
             <Link
               className="hover:text-blue-500 font-bold"
-              href="https://github.com"
+              href="https://c.tenor.com/oj_S2xseej8AAAAC/tenor.gif"
               target="_blank"
-              aria-label="GitHub"
+              aria-label="Chandrashekhar"
             >
               Chandrashekhar.
             </Link>{" "}
@@ -29,7 +29,11 @@ const Footer = () => {
 
         {/* Right Section*/}
         <div className="flex items-center gap-4 mt-4 md:mt-0">
-          <Link href="https://github.com" target="_blank" aria-label="GitHub">
+          <Link
+            href="https://github.com/StarDust130"
+            target="_blank"
+            aria-label="GitHub"
+          >
             <GitHubLogoIcon className="w-5 h-5 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors" />
           </Link>
           <Link
