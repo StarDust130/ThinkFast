@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href={"/"} className="flex justify-center items-center gap-1">
+    <Link href={"/"} className="flex justify-center items-center">
       <Image src="/logo.png" alt="logo" width={40} height={40} />
-      <p>Think Fast</p>
+      <p className="font-bold">Think Fast</p>
     </Link>
   );
 };

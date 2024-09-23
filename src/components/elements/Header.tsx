@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center ">
+    <header className="flex justify-between items-center px-2 py-2">
       <div className="flex justify-center items-center gap-8">
         <Logo />
         <p>Leaderboard</p>
