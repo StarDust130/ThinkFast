@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${fredericka.className} antialiased`}>{children}</body>
+      <body className={` ${fredericka.className} antialiased`}>
+        <main className="px-10 h-screen w-full">{children}</main>
+      </body>
     </html>
   );
 }
