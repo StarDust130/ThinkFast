@@ -30,10 +30,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="h-screen w-full">
-            <Header />
-            {children}
-            <Footer />
+          <main className="min-h-screen flex flex-col">
+            <div className="min-h-screen w-full flex-grow ">
+              <Header />
+              {children}
+              <Footer />
+            </div>
           </main>
         </ThemeProvider>
       </body>

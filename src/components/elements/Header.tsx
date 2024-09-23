@@ -46,13 +46,7 @@ const Header = () => {
       {/* Right side */}
       <div className="flex items-center gap-5">
         {/* Show on large screens */}
-        <Link
-          href="https://github.com/StarDust130/ThinkFast"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <GitHubLogoIcon className="w-5 h-5  text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors" />
-        </Link>
+       
         <div className="hidden md:flex gap-2">
           <Link href="/login">
             <Button>Login</Button>
