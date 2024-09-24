@@ -4,7 +4,9 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/elements/theme-provider";
 import Header from "@/components/elements/Header";
 import Footer from "@/components/elements/Footer";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import Loader from "@/components/elements/Loader";
 
 const fredericka = Stardos_Stencil({
   subsets: ["latin"],
@@ -23,7 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
       <html lang="en" suppressHydrationWarning>
         <body className={` ${fredericka.className} antialiased`}>
           <ThemeProvider
@@ -35,7 +41,10 @@ export default function RootLayout({
             <main className="min-h-screen flex flex-col">
               <div className="min-h-screen w-full flex-grow ">
                 <Header />
-                {children}
+                <ClerkLoading>
+                  <Loader />
+                </ClerkLoading>
+                <ClerkLoaded>{children}</ClerkLoaded>
                 <Footer />
               </div>
             </main>

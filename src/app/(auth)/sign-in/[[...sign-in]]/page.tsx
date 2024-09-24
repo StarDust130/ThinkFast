@@ -1,6 +1,6 @@
-"use client";
 import { SignIn } from "@clerk/nextjs";
 import Image from "next/image";
+
 const page = () => {
   return (
     <>

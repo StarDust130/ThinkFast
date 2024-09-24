@@ -8,9 +8,9 @@ import Link from "next/link";
 const error = () => {
   return (
     <div>
-      <div className="grid h-screen place-content-center px-4">
-        <div className="text-center">
-          <Image src="/error.png" alt="404" width={500} height={500} />
+      <div className="flex justify-center items-center h-screen px-4">
+        <div className="text-center flex flex-col justify-center items-center h-screen px-4">
+          <Image src="/error.png" alt="404" width={400} height={400} />
 
           <h1 className="mt-6 text-2xl font-bold tracking-tight sm:text-4xl">
             Oops! Something Went Wrong.
