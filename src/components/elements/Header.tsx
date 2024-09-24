@@ -11,6 +11,7 @@ import {
   SheetTrigger,
   SheetClose, // Import SheetClose
 } from "@/components/ui/sheet";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
@@ -47,17 +48,33 @@ const Header = () => {
         {/* Show on large screens */}
 
         <div className="hidden md:flex gap-2">
-          <Link href="/sign-in">
-            <Button>Login</Button>
-          </Link>
-          <Link href="/sign-up">
-            <Button variant="ghost">Register</Button>
-          </Link>
+          <SignedOut>
+            <Link href="/sign-in">
+              <Button>Login</Button>
+            </Link>
+            <Link href="/sign-up">
+              <Button variant="ghost">Register</Button>
+            </Link>
+          </SignedOut>
+
+          <SignedIn>
+            {/* Mount the UserButton component */}
+            <UserButton />
+          </SignedIn>
+
+          <SignedOut>
+            {/* Signed out users get sign in button */}
+            <SignInButton />
+          </SignedOut>
           <ModeToggle />
         </div>
 
         {/* Show on small screens */}
         <div className="md:hidden flex items-center gap-4 ">
+          <SignedIn>
+            {/* Mount the UserButton component */}
+            <UserButton />
+          </SignedIn>
           <Sheet>
             <SheetTrigger>
               <Menu className="w-6 h-6" />
@@ -87,18 +104,25 @@ const Header = () => {
                     About Us
                   </Link>
                 </SheetClose>
+                <SignedOut>
+                  <SheetClose asChild>
+                    <Link
+                      href="/sign-in"
+                      className="font-medium hover:underline"
+                    >
+                      Login
+                    </Link>
+                  </SheetClose>
 
-                <SheetClose asChild>
-                  <Link href="/sign-in" className="font-medium hover:underline">
-                    Login
-                  </Link>
-                </SheetClose>
-
-                <SheetClose asChild>
-                  <Link href="/sign-up" className="font-medium hover:underline">
-                    Register
-                  </Link>
-                </SheetClose>
+                  <SheetClose asChild>
+                    <Link
+                      href="/sign-up"
+                      className="font-medium hover:underline"
+                    >
+                      Register
+                    </Link>
+                  </SheetClose>
+                </SignedOut>
               </nav>
 
               <span className="absolute bottom-3 left-5">
