@@ -11,7 +11,7 @@ import {
   SheetTrigger,
   SheetClose, // Import SheetClose
 } from "@/components/ui/sheet";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut,  UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
@@ -62,10 +62,6 @@ const Header = () => {
             <UserButton />
           </SignedIn>
 
-          <SignedOut>
-            {/* Signed out users get sign in button */}
-            <SignInButton />
-          </SignedOut>
           <ModeToggle />
         </div>
 
