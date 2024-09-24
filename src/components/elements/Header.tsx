@@ -47,10 +47,10 @@ const Header = () => {
         {/* Show on large screens */}
 
         <div className="hidden md:flex gap-2">
-          <Link href="/login">
+          <Link href="/sign-in">
             <Button>Login</Button>
           </Link>
-          <Link href="/register">
+          <Link href="/sign-up">
             <Button variant="ghost">Register</Button>
           </Link>
           <ModeToggle />
@@ -89,16 +89,13 @@ const Header = () => {
                 </SheetClose>
 
                 <SheetClose asChild>
-                  <Link href="/login" className="font-medium hover:underline">
+                  <Link href="/sign-in" className="font-medium hover:underline">
                     Login
                   </Link>
                 </SheetClose>
 
                 <SheetClose asChild>
-                  <Link
-                    href="/register"
-                    className="font-medium hover:underline"
-                  >
+                  <Link href="/sign-up" className="font-medium hover:underline">
                     Register
                   </Link>
                 </SheetClose>
