@@ -20,7 +20,7 @@ const page = () => {
             alt="Image"
             width="1920"
             height="1080"
-            className="h-full w-full object-cover rounded-xl  "
+            className="h-full w-full object-cover rounded-3xl    "
           />
         </div>
       </div>
