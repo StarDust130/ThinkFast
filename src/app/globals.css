@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -60,10 +59,9 @@
   }
 }
 
-
 /* Loader Css */
-/* From Uiverse.io by jeremyssocial */ 
-/* From Uiverse.io by Subaashbala */ 
+/* From Uiverse.io by jeremyssocial */
+/* From Uiverse.io by Subaashbala */
 /* Prior to using this loader, please ensure that you have set a background image or background color, as the text is transparent and not designed with a solid color. */
 .loader {
   --ANIMATION-DELAY-MULTIPLIER: 70ms;
@@ -117,5 +115,44 @@
   }
   100% {
     transform: translateY(0rem);
+  }
+}
+
+/* Glow  */
+/* Light Mode Glow Animation */
+.glow-effect {
+  animation: glow-light 2s ease-in-out infinite;
+}
+
+@keyframes glow-light {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+                 0 0 15px rgba(0, 0, 0, 0.4),
+                 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7),
+                 0 0 25px rgba(0, 0, 0, 0.6),
+                 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Dark Mode Glow Animation */
+.dark .glow-effect-dark {
+  animation: glow-dark 2s ease-in-out infinite;
+}
+
+@keyframes glow-dark {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4),
+                 0 0 40px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+                 0 0 40px rgba(255, 255, 255, 0.8),
+                 0 0 50px rgba(255, 255, 255, 0.6),
+                 0 0 60px rgba(255, 255, 255, 0.4);
   }
 }

@@ -1,7 +1,8 @@
+import Sidebar from "@/components/elements/Sidebar"
 
 const page = () => {
   return (
-    <div>Dashboard page</div>
+    <div className="h-screen "><Sidebar />Dashboard page</div>
   )
 }
 export default page
