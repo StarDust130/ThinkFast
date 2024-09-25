@@ -1,5 +1,6 @@
 // import { useRouter } from "next/navigation";
 
+import { Filter } from "@/components/elements/Filter";
 import { Button } from "@/components/ui/button";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { cards } from "@/lib/extra";
@@ -16,19 +17,24 @@ function Quiz() {
           name="brain-circuit"
           className="text-purple-500 animate-pulse"
         />
-        <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 drop-shadow-lg text-center">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 drop-shadow-lg text-center">
           Select Your Quiz Category
         </h1>
       </div>
 
       {/* Description with subtle animation */}
-      <p className="text-base md:text-lg text-gray-600 animate-fade-in text-center">
+      <p className=" text-xs sm:text-base md:text-lg text-gray-600 animate-fade-in text-center">
         Test your knowledge in various categories! Pick your favorite and get
         started.
       </p>
 
+      {/* Filter Component */}
+      <div className="flex w-full justify-end">
+        <Filter />
+      </div>
+
       {/* CTA Buttons with icons */}
-      <div className="mt-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 animate-slide-up">
+      <div className="mt-4 hidden  flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 animate-slide-up">
         <Button className="flex items-center space-x-2 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500 to-pink-500 text-white rounded-lg shadow-lg transform hover:scale-105 hover:from-indigo-500 hover:to-blue-500 transition-all duration-300 ease-out">
           <Dice6 name="dice-5" className="w-5 h-5" />
           <span>Random Quiz</span>
@@ -40,8 +46,6 @@ function Quiz() {
           </Button>
         </Link>
       </div>
-
-      
 
       {/* Focus Cards for categories */}
       <FocusCards cards={cards} />
