@@ -9,7 +9,7 @@ export default function MainLayout({
     <div className="flex flex-col min-h-screen">
       <div className="flex flex-grow">
         {/* Sidebar (fixed, starts below the header) */}
-        <aside className="z-10 sticky top-0">
+        <aside className="z-10 absplute top-0">
           <Sidebar />
         </aside>
 

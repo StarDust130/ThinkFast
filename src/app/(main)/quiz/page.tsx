@@ -29,17 +29,19 @@ function Quiz() {
 
       {/* CTA Buttons with icons */}
       <div className="mt-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 animate-slide-up">
-        <Button className="flex items-center space-x-2 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg transform hover:scale-105 hover:from-indigo-500 hover:to-blue-500 transition-all duration-300 ease-out">
+        <Button className="flex items-center space-x-2 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500 to-pink-500 text-white rounded-lg shadow-lg transform hover:scale-105 hover:from-indigo-500 hover:to-blue-500 transition-all duration-300 ease-out">
           <Dice6 name="dice-5" className="w-5 h-5" />
           <span>Random Quiz</span>
         </Button>
         <Link href={"/leaderboard"}>
-          <Button className="flex items-center space-x-2 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg shadow-lg transform hover:scale-105 hover:from-teal-500 hover:to-green-500 transition-all duration-300 ease-out">
+          <Button className="flex items-center space-x-2 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500 to-yellow-500 text-white rounded-lg shadow-lg transform hover:scale-105 hover:from-teal-500 hover:to-green-500 transition-all duration-300 ease-out">
             <SquareKanban name="trophy" className="w-5 h-5" />
             <span>View Leaderboard</span>
           </Button>
         </Link>
       </div>
+
+      
 
       {/* Focus Cards for categories */}
       <FocusCards cards={cards} />
