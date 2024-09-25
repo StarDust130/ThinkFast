@@ -1,8 +1,9 @@
+"use client";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Logo from "./Logo";
 import { ModeToggle } from "./ModeToggle";
-import { Menu } from "lucide-react";
+import { LogOut, Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -11,11 +12,12 @@ import {
   SheetTrigger,
   SheetClose, // Import SheetClose
 } from "@/components/ui/sheet";
-import { SignedIn, SignedOut,  UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, useClerk, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
+  const { signOut } = useClerk();
   return (
-    <header className="flex justify-between items-center px-4 py-3 z-50  ">
+    <header className="flex justify-between items-center border-b px-4 py-3 z-50  ">
       {/* Logo */}
       <div className="flex items-center">
         <Logo />
@@ -119,6 +121,23 @@ const Header = () => {
                     </Link>
                   </SheetClose>
                 </SignedOut>
+                <SignedIn>
+                  <SheetClose asChild>
+                    <Link href="/shop" className="font-medium hover:underline">
+                      Shop
+                    </Link>
+                  </SheetClose>
+
+                  <SheetClose asChild>
+                    <Button
+                      variant={"ghost"}
+                      onClick={() => signOut()}
+                      className="flex justify-start items-center p-1 w-full"
+                    >
+                      Logout
+                    </Button>
+                  </SheetClose>
+                </SignedIn>
               </nav>
 
               <span className="absolute bottom-3 left-5">

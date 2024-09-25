@@ -8,7 +8,7 @@ export default function MainLayout({
   return (
     <div className="flex h-screen ">
       {/* Sidebar (starts below the header) */}
-      <aside className=" bg-gray-200 z-10 sticky">
+      <aside className="z-10 sticky">
         <Sidebar />
       </aside>
 
