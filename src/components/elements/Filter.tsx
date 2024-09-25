@@ -22,6 +22,10 @@ import { SlidersHorizontal } from "lucide-react";
 
 const frameworks = [
   {
+    value: "All",
+    label: "All",
+  },
+  {
     value: "Entertainment",
     label: "Entertainment",
   },
@@ -68,9 +72,9 @@ export function Filter() {
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." className="h-9" />
+          <CommandInput placeholder="Search quiz..." className="h-9" />
           <CommandList>
-            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandEmpty>No quiz found.</CommandEmpty>
             <CommandGroup>
               {frameworks.map((framework) => (
                 <CommandItem
