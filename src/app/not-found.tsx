@@ -8,7 +8,7 @@ const notFound = () => {
     <div>
       <div className="grid h-screen place-content-center  px-4">
         <div className="text-center">
-          <Image src="/not-found.png" alt="404" width={500} height={500} />
+          <Image src="/not-found.png" alt="404" width={300} height={300} />
 
           <h1 className="mt-6 text-2xl font-bold tracking-tight  sm:text-4xl">
             Uh-oh!

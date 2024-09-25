@@ -27,12 +27,6 @@ const Header = () => {
       <nav className="hidden md:flex gap-8">
         <Link
           className="font-medium hover:text-gray-500 dark:hover:text-gray-300"
-          href="/leaderboard"
-        >
-          Leaderboard
-        </Link>
-        <Link
-          className="font-medium hover:text-gray-500 dark:hover:text-gray-300"
           href="/quiz"
         >
           Quiz
@@ -42,6 +36,12 @@ const Header = () => {
           href="/about"
         >
           About Us
+        </Link>
+        <Link
+          className="font-medium hover:text-gray-500 dark:hover:text-gray-300"
+          href="/help"
+        >
+          Help
         </Link>
       </nav>
 

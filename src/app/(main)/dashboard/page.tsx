@@ -2,7 +2,7 @@
 
 const page = () => {
   return (
-    <div className="h-screen ">lorem500</div>
+    <div className="h-full ">lorem500</div>
   )
 }
 export default page
