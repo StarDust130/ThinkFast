@@ -1,8 +1,7 @@
 
-
 const page = () => {
   return (
-    <div className="h-full ">lorem500</div>
+    <div>page</div>
   )
 }
 export default page

@@ -6,14 +6,16 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen ">
-      {/* Sidebar (starts below the header) */}
-      <aside className="z-10 sticky">
-        <Sidebar />
-      </aside>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex flex-grow">
+        {/* Sidebar (fixed, starts below the header) */}
+        <aside className="z-10 sticky top-0">
+          <Sidebar />
+        </aside>
 
-      {/* Main content area (scrollable) */}
-      <div className="flex-grow mx-16 mb-20 pt-4">{children}</div>
+        {/* Main content area (scrollable) */}
+        <div className="flex-grow  mx-16 pt-4">{children}</div>
+      </div>
     </div>
   );
 }

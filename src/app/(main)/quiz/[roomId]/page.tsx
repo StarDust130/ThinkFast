@@ -1,8 +1,7 @@
 
-
 const page = () => {
   return (
-    <div>Quiz ID page</div>
+    <div>page</div>
   )
 }
 export default page
