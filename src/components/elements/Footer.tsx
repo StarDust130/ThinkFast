@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className=" py-6 px-4 w-full">
+    <footer className="py-6 mb-16 lg:mb-0 px-4 border-t  w-full ">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Section: Logo */}
         <div className="flex items-center gap-4">
@@ -27,14 +27,14 @@ const Footer = () => {
           </span>
         </div>
 
-        {/* Right Section*/}
+        {/* Right Section */}
         <div className="flex items-center gap-4 mt-4 md:mt-0">
           <Link
             href="https://github.com/StarDust130/ThinkFast"
             target="_blank"
             aria-label="GitHub"
           >
-            <GitHubLogoIcon className="w-5 h-5  text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors" />
+            <GitHubLogoIcon className="w-5 h-5 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors" />
           </Link>
           <Link
             href="mailto:csyadav0513@gmail.com"
