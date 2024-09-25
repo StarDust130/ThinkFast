@@ -67,7 +67,7 @@ const Sidebar = () => {
             }`}
           >
             <Swords className="h-6 w-6" />
-            <span className="ml-4 text-lg">Room</span>
+            <span className="ml-4 text-lg">Join Room</span>
           </Link>
           <Link
             href="/leaderboard"
@@ -126,6 +126,13 @@ const Sidebar = () => {
           <LayoutDashboard className="h-6 w-6" />
           <span className="text-xs">Dashboard</span>
         </Link>
+        <Link
+          href="/quiz"
+          className="flex flex-col items-center text-gray-500 hover:text-gray-700"
+        >
+          <Brain className="h-6 w-6" />
+          <span className="text-xs">Quiz</span>
+        </Link>
 
         <Link
           href="/quiz/123"
@@ -149,14 +156,6 @@ const Sidebar = () => {
         >
           <Sparkles className="h-6 w-6" />
           <span className="text-xs">AI</span>
-        </Link>
-
-        <Link
-          href="/quiz"
-          className="flex flex-col items-center text-gray-500 hover:text-gray-700"
-        >
-          <Brain className="h-6 w-6" />
-          <span className="text-xs">Quiz</span>
         </Link>
       </div>
     </>
