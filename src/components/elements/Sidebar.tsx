@@ -148,7 +148,7 @@ const Sidebar = () => {
             href="/quiz/123"
             className="flex flex-col items-center text-gray-500 hover:text-gray-700"
           >
-            <Swords className="h-10 w-10" />
+            <Swords className="h-6 w-6" />
             <span className="text-xs">Room</span>
           </Link>
 

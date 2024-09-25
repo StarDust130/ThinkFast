@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import Logo from "./Logo";
 import { ModeToggle } from "./ModeToggle";
-import { LogOut, Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -13,6 +12,7 @@ import {
   SheetClose, // Import SheetClose
 } from "@/components/ui/sheet";
 import { SignedIn, SignedOut, useClerk, UserButton } from "@clerk/nextjs";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const { signOut } = useClerk();
@@ -132,7 +132,7 @@ const Header = () => {
                     <Button
                       variant={"ghost"}
                       onClick={() => signOut()}
-                      className="flex justify-start items-center p-1 w-full"
+                      className="flex justify-start font-medium items-center p-1 w-full"
                     >
                       Logout
                     </Button>
