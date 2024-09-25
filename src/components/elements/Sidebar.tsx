@@ -1,7 +1,7 @@
 "use client";
 import {
   BadgePlus,
-  History,
+  Brain,
   LayoutDashboard,
   LogOut,
   ShoppingBag,
@@ -37,6 +37,17 @@ const Sidebar = () => {
             <span className="ml-4 text-lg">Dashboard</span>
           </Link>
           <Link
+            href="/quiz"
+            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
+              currentPath === "/quiz"
+                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
+                : ""
+            }`}
+          >
+            <Brain className="h-6 w-6" />
+            <span className="ml-4 text-lg">Quiz</span>
+          </Link>
+          <Link
             href="/quiz/create-quiz"
             className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
               currentPath === "/quiz/create-quiz"
@@ -69,17 +80,7 @@ const Sidebar = () => {
             <SquareKanban className="h-6 w-6" />
             <span className="ml-4 text-lg">LeaderBoard</span>
           </Link>
-          <Link
-            href="/history"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/history"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <History className="h-6 w-6" />
-            <span className="ml-4 text-lg">History</span>
-          </Link>
+
           <Link
             href="/ai"
             className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
@@ -151,11 +152,11 @@ const Sidebar = () => {
         </Link>
 
         <Link
-          href="/history"
+          href="/quiz"
           className="flex flex-col items-center text-gray-500 hover:text-gray-700"
         >
-          <History className="h-6 w-6" />
-          <span className="text-xs">History</span>
+          <Brain className="h-6 w-6" />
+          <span className="text-xs">Quiz</span>
         </Link>
       </div>
     </>
