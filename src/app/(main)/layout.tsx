@@ -13,7 +13,7 @@ export default function MainLayout({
       </aside>
 
       {/* Main content area (scrollable) */}
-      <div className="flex-grow ml-16 mb-20 pt-4">{children}</div>
+      <div className="flex-grow mx-16 mb-20 pt-4">{children}</div>
     </div>
   );
 }
