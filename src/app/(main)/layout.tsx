@@ -1,4 +1,5 @@
 import Header from "@/components/elements/Header";
+import ScrollToTop from "@/components/elements/ScrollToTop";
 import Sidebar from "@/components/elements/Sidebar";
 
 export default function MainLayout({
@@ -19,6 +20,7 @@ export default function MainLayout({
 
         {/* Main content area (scrollable, adjusts for header height) */}
         <div className="pt-16 md:pl-20  overflow-y-auto">{children}</div>
+        <ScrollToTop />
       </div>
     </div>
   );
