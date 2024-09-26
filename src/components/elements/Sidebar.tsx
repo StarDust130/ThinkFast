@@ -9,10 +9,11 @@ import {
   SquareKanban,
   Swords,
 } from "lucide-react";
-import Link from "next/link";
 import { useClerk } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
+import Bottombar from "./Bottombar";
+import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
   const { signOut } = useClerk();
@@ -21,93 +22,56 @@ const Sidebar = () => {
   return (
     <>
       {/* Sidebar for large screens */}
-      <div className="hidden h-full w-48 fixed top-0 bg-white dark:bg-black left-0   flex-col border-e lg:flex">
-        <div className="flex-grow  px-2 mt-20 space-y-4">
-          <Link
+      <div className="hidden h-full w-48 fixed top-0 bg-white dark:bg-black left-0 flex-col border-e lg:flex">
+        <div className="flex-grow px-2 mt-20 space-y-4">
+          <SidebarItem
             href="/dashboard"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/dashboard"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <LayoutDashboard className="h-6 w-6" />
-            <span className="ml-4 text-lg">Dashboard</span>
-          </Link>
-          <Link
+            currentPath={currentPath}
+            icon={LayoutDashboard}
+            label="Dashboard"
+          />
+          <SidebarItem
             href="/quiz"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/quiz"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <Brain className="h-6 w-6" />
-            <span className="ml-4 text-lg">Quiz</span>
-          </Link>
-          <Link
+            currentPath={currentPath}
+            icon={Brain}
+            label="Quiz"
+          />
+          <SidebarItem
             href="/quiz/create-quiz"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/quiz/create-quiz"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <BadgePlus className="h-6 w-6" />
-            <span className="ml-4 text-lg">Create Quiz</span>
-          </Link>
-          <Link
-            href={"/quiz/room"}
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/quiz/room"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <Swords className="h-6 w-6" />
-            <span className="ml-4 text-lg">Join Room</span>
-          </Link>
-          <Link
+            currentPath={currentPath}
+            icon={BadgePlus}
+            label="Create Quiz"
+          />
+          <SidebarItem
+            href="/quiz/room"
+            currentPath={currentPath}
+            icon={Swords}
+            label="Join Room"
+          />
+          <SidebarItem
             href="/leaderboard"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/leaderboard"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <SquareKanban className="h-6 w-6" />
-            <span className="ml-4 text-lg">LeaderBoard</span>
-          </Link>
-
-          <Link
+            currentPath={currentPath}
+            icon={SquareKanban}
+            label="LeaderBoard"
+          />
+          <SidebarItem
             href="/ai"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/ai"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <Sparkles className="h-6 w-6" />
-            <span className="ml-4 text-lg">AI</span>
-          </Link>
-          <Link
+            currentPath={currentPath}
+            icon={Sparkles}
+            label="AI"
+          />
+          <SidebarItem
             href="/shop"
-            className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
-              currentPath === "/shop"
-                ? "bg-gray-100 text-gray-700 dark:bg-gray-700"
-                : ""
-            }`}
-          >
-            <ShoppingBag className="h-6 w-6" />
-            <span className="ml-4 text-lg">Shop</span>
-          </Link>
+            currentPath={currentPath}
+            icon={ShoppingBag}
+            label="Shop"
+          />
         </div>
         <div className="mt-4 mb-5 flex justify-start items-center">
           <Button
             variant={"ghost"}
             onClick={() => signOut()}
-            className={`flex items-center p-3 dark:text-white text-gray-500 w-full  hover:text-gray-700 transition-all duration-300 rounded 
-             `}
+            className="flex items-center p-3 dark:text-white text-gray-500 w-full hover:text-gray-700 transition-all duration-300 rounded"
           >
             <LogOut className="h-6 w-6" />
             <span className="ml-4 text-lg">Logout</span>
@@ -116,45 +80,37 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom Navbar for Small Screens */}
-      <div className="fixed inset-x-0 bottom-0 flex justify-around p-3 shadow-lg lg:hidden border-t z-50 bg-white   dark:bg-black">
-        <Link
+      <div className="fixed inset-x-0 bottom-0 flex justify-around p-3 shadow-lg lg:hidden border-t z-50 bg-white dark:bg-black">
+        <Bottombar
           href="/dashboard"
-          className="flex flex-col items-center text-gray-500  hover:text-gray-700"
-        >
-          <LayoutDashboard className="h-6 w-6" />
-          <span className="text-xs">Dashboard</span>
-        </Link>
-        <Link
+          currentPath={currentPath}
+          icon={LayoutDashboard}
+          label="Dashboard"
+        />
+        <Bottombar
           href="/quiz"
-          className="flex flex-col items-center text-gray-500 hover:text-gray-700"
-        >
-          <Brain className="h-6 w-6" />
-          <span className="text-xs">Quiz</span>
-        </Link>
-
-        <Link
-          href="/quiz/123"
-          className="flex flex-col items-center text-gray-500 hover:text-gray-700"
-        >
-          <Swords className="h-6 w-6" />
-          <span className="text-xs">Room</span>
-        </Link>
-
-        <Link
+          currentPath={currentPath}
+          icon={Brain}
+          label="Quiz"
+        />
+        <Bottombar
           href="/quiz/create-quiz"
-          className="flex flex-col items-center text-gray-500 hover:text-gray-700"
-        >
-          <BadgePlus className="h-6 w-6" />
-          <span className="text-xs">Create Quiz</span>
-        </Link>
-
-        <Link
+          currentPath={currentPath}
+          icon={BadgePlus}
+          label="Create Quiz"
+        />
+        <Bottombar
+          href="/quiz/room"
+          currentPath={currentPath}
+          icon={Swords}
+          label="Room"
+        />
+        <Bottombar
           href="/ai"
-          className="flex flex-col items-center text-gray-500 hover:text-gray-700"
-        >
-          <Sparkles className="h-6 w-6" />
-          <span className="text-xs">AI</span>
-        </Link>
+          currentPath={currentPath}
+          icon={Sparkles}
+          label="AI"
+        />
       </div>
     </>
   );

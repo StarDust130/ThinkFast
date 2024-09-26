@@ -9,7 +9,6 @@ import {
   PanelLeft,
   PlusCircle,
   Search,
-  Settings,
   ShoppingCart,
   Upload,
   Users2,
