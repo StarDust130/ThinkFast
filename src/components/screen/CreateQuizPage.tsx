@@ -64,7 +64,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 export const description =
   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images.";
 
-export function PlayGround() {
+export function CreateQuizPage() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
@@ -184,25 +184,25 @@ export function PlayGround() {
                 <span className="sr-only">Back</span>
               </Button>
               <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
-                Pro Controller
+                Anime Quiz
               </h1>
               <Badge variant="outline" className="ml-auto sm:ml-0">
                 In stock
               </Badge>
               <div className="hidden items-center gap-2 md:ml-auto md:flex">
                 <Button variant="outline" size="sm">
-                  Discard
+                  Go Back
                 </Button>
-                <Button size="sm">Save Product</Button>
+                <Button size="sm">Start Quiz</Button>
               </div>
             </div>
             <div className="grid gap-4 md:grid-cols-[1fr_250px] lg:grid-cols-3 lg:gap-8">
               <div className="grid auto-rows-max items-start gap-4 lg:col-span-2 lg:gap-8">
                 <Card x-chunk="dashboard-07-chunk-0">
                   <CardHeader>
-                    <CardTitle>Product Details</CardTitle>
+                    <CardTitle>User Details</CardTitle>
                     <CardDescription>
-                      Lipsum dolor sit amet, consectetur adipiscing elit
+                      Personal details and preferences.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>

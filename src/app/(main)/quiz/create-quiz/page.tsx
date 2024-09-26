@@ -1,7 +1,8 @@
+import { CreateQuizPage } from "@/components/screen/CreateQuizPage"
 
 const page = () => {
   return (
-    <div>Create Quiz page</div>
+    <CreateQuizPage />
   )
 }
 export default page
