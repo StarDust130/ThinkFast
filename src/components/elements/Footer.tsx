@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-6 mb-16 lg:mb-0 px-4 border-t  w-full ">
+    <footer className="py-6 mb-16 lg:mb-0 px-4 border-t dark:bg-black w-full ">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Section: Logo */}
         <div className="flex items-center gap-4">

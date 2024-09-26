@@ -19,7 +19,7 @@ export default function MainLayout({
         <Header />
 
         {/* Main content area (scrollable, adjusts for header height) */}
-        <div className="pt-16 md:pl-40  overflow-y-auto">{children}</div>
+        <div className="pt-16 md:pl-40 dark:bg-black dark:text-white  overflow-y-auto">{children}</div>
         <ScrollToTop />
       </div>
     </div>

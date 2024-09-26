@@ -31,7 +31,7 @@ function Quiz() {
       </div>
 
       {/* Description with subtle animation */}
-      <p className=" text-xs sm:text-base md:text-lg text-gray-600 animate-fade-in text-center">
+      <p className=" text-xs sm:text-base md:text-lg text-gray-600 dark:text-white animate-fade-in text-center">
         Test your knowledge in various categories! Pick your favorite and get
         started.
       </p>
