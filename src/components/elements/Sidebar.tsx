@@ -67,11 +67,11 @@ const Sidebar = () => {
             label="Shop"
           />
         </div>
-        <div className="mt-4 mb-5 flex justify-start items-center">
+        <div className="mt-4 mb-5 flex justify-start w-full  items-start">
           <Button
             variant={"ghost"}
             onClick={() => signOut()}
-            className="flex items-center p-3 dark:text-white text-gray-500 w-full hover:text-gray-700 transition-all duration-300 rounded"
+            className="flex justify-start items-center p-3  dark:text-white text-gray-500 w-full hover:text-gray-700 transition-all duration-300 rounded"
           >
             <LogOut className="h-6 w-6" />
             <span className="ml-4 text-lg">Logout</span>
