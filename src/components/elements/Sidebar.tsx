@@ -22,7 +22,7 @@ const Sidebar = () => {
     <>
       {/* Sidebar for large screens */}
       <div className="hidden h-full w-48 fixed top-0 bg-white dark:bg-black left-0   flex-col border-e lg:flex">
-        <div className="flex-grow mt-4 px-2 space-y-4">
+        <div className="flex-grow  px-2 mt-20 space-y-4">
           <Link
             href="/dashboard"
             className={`flex items-center p-3 dark:text-white text-gray-500 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300 rounded ${
