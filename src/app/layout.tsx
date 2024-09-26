@@ -14,7 +14,10 @@ const fredericka = Stardos_Stencil({
 });
 
 export const metadata: Metadata = {
-  title: "Think Fast",
+  title: {
+    template: "%s : Think Fast",
+    default: "Welcome:  Think Fast",
+  },
   description:
     "ThinkFast 🎉 is an interactive quiz app for kids and Gen Z, turning learning into a fun competition! ",
 };
