@@ -17,7 +17,7 @@ function Quiz() {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center space-y-4 p-4 md:p-12">
+    <div className="flex flex-col justify-center  items-center space-y-4 p-4 md:p-12">
       {/* Cool Header with a Quiz Icon */}
       <div className="flex flex-col md:flex-row justify-between gap-4 items-center space-y-2 md:space-y-0">
         <Brain
