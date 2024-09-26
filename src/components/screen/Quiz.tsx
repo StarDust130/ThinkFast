@@ -10,10 +10,10 @@ import { useState } from "react";
 function Quiz() {
   const [selected, setSelected] = useState("all");
 
+  // Filter the cards based on the selected value
   const filterValue = cards.filter((card) => {
-    if (selected === "") return card;
-    if (selected === "all") return card;
-    return card.filterValue === selected;
+    if (selected === "" || selected === "all") return true; 
+    return card.filterValue?.toLowerCase() === selected.toLowerCase(); 
   });
 
   return (
