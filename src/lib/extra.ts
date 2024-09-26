@@ -75,7 +75,7 @@ export const cards = [
     title: "Mythology",
     src: "/anime-girl-2.jpg",
     category: 20,
-    filterValue: "time pass",
+    filterValue: "art",
   },
   {
     title: "Sports",
