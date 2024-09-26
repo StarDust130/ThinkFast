@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Sidebar for large screens */}
-      <div className="hidden h-full w-48  flex-col border-e lg:flex">
+      <div className="hidden h-full w-48 fixed top-0 bg-white dark:bg-black left-0   flex-col border-e lg:flex">
         <div className="flex-grow mt-4 px-2 space-y-4">
           <Link
             href="/dashboard"
@@ -116,7 +116,7 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom Navbar for Small Screens */}
-      <div className="fixed inset-x-0 bottom-0 flex justify-around p-3 shadow-lg lg:hidden border-t bg-white   dark:bg-black">
+      <div className="fixed inset-x-0 bottom-0 flex justify-around p-3 shadow-lg lg:hidden border-t z-50 bg-white   dark:bg-black">
         <Link
           href="/dashboard"
           className="flex flex-col items-center text-gray-500  hover:text-gray-700"
