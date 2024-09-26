@@ -1,4 +1,4 @@
-// import { useRouter } from "next/navigation";
+"use client";
 
 import { Filter } from "@/components/elements/Filter";
 import { Button } from "@/components/ui/button";
@@ -6,8 +6,20 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import { cards } from "@/lib/extra";
 import { Brain, Dice6, SquareKanban } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 function Quiz() {
+  const [selected, setSelected] = useState("all");
+  console.log(selected);
+
+  const filterValue = cards.filter((card) => {
+    if (selected === "") return card;
+    if (selected === "all") return card;
+    return card.filterValue === selected;
+  });
+
+  console.log(selected);
+
   return (
     <div className="flex flex-col justify-center items-center space-y-4 p-4 md:p-12">
       {/* Cool Header with a Quiz Icon */}
@@ -15,7 +27,7 @@ function Quiz() {
         <Brain
           size={40} // Adjusted size for smaller screens
           name="brain-circuit"
-          className="text-purple-500 animate-pulse"
+          className="text-purple-500 animate-pulse hidden md:block"
         />
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 drop-shadow-lg text-center">
           Select Your Quiz Category
@@ -29,8 +41,8 @@ function Quiz() {
       </p>
 
       {/* Filter Component */}
-      <div className="flex w-full justify-end">
-        <Filter />
+      <div className="flex w-full justify-center items-center md:justify-end">
+        <Filter setSelected={setSelected} selected={selected} />
       </div>
 
       {/* CTA Buttons with icons */}
@@ -48,7 +60,7 @@ function Quiz() {
       </div>
 
       {/* Focus Cards for categories */}
-      <FocusCards cards={cards} />
+      <FocusCards cards={filterValue} />
 
       {/* New Challenges Section */}
       <div className="mt-4">

@@ -18,8 +18,6 @@ const Sidebar = () => {
   const { signOut } = useClerk();
   const currentPath = usePathname();
 
-  console.log(currentPath);
-
   return (
     <>
       {/* Sidebar for large screens */}

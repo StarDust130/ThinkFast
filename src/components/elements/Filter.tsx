@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import * as React from "react";
@@ -22,38 +23,42 @@ import { SlidersHorizontal } from "lucide-react";
 
 const frameworks = [
   {
-    value: "All",
+    value: "all",
     label: "All",
   },
   {
-    value: "Entertainment",
+    value: "entertainment",
     label: "Entertainment",
   },
   {
-    value: "Science",
+    value: "science",
     label: "Science",
   },
   {
-    value: "Technology",
+    value: "technology",
     label: "Technology",
   },
   {
-    value: "Art",
+    value: "art",
     label: "Art",
   },
   {
-    value: "Anime",
+    value: "anime",
     label: "Anime",
   },
   {
-    value: "Time Pass",
+    value: "time pass",
     label: "Time Pass",
   },
 ];
 
-export function Filter() {
+export function Filter({ setSelected }: any) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
+
+  React.useEffect(() => {
+    setSelected(value);
+  }, [value, setSelected]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
