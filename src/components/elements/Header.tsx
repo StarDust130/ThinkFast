@@ -17,7 +17,7 @@ import { Menu } from "lucide-react";
 const Header = () => {
   const { signOut } = useClerk();
   return (
-    <header className="flex justify-between items-center border-b px-4 py-3 z-50  ">
+    <header className="flex justify-between items-center border-b w-full px-4 py-3 z-50  bg-white dark:bg-black fixed top-0  right-0   ">
       {/* Logo */}
       <div className="flex items-center">
         <Logo />
