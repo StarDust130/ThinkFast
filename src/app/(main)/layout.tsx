@@ -1,3 +1,4 @@
+import Header from "@/components/elements/Header";
 import Sidebar from "@/components/elements/Sidebar";
 
 export default function MainLayout({
@@ -6,15 +7,18 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="flex flex-grow">
-        {/* Sidebar (fixed, starts below the header) */}
-        <aside className="z-10 absplute top-0">
-          <Sidebar />
-        </aside>
+    <div className="flex">
+      {/* Sidebar (fixed on the left) */}
 
-        {/* Main content area (scrollable) */}
-        <div className="flex-grow  mx-16 pt-4">{children}</div>
+      <Sidebar />
+
+      <div className="flex-grow  min-h-screen">
+        {/* Header (fixed on top) */}
+
+        <Header />
+
+        {/* Main content area (scrollable, adjusts for header height) */}
+        <div className="pt-16 px-20  overflow-y-auto">{children}</div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Stardos_Stencil } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/elements/theme-provider";
-import Header from "@/components/elements/Header";
+
 import Footer from "@/components/elements/Footer";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
@@ -43,7 +43,6 @@ export default function RootLayout({
           >
             <main className="min-h-screen flex flex-col">
               <div className="min-h-screen w-full flex-grow ">
-                <Header />
                 <ClerkLoading>
                   <Loader />
                 </ClerkLoading>
