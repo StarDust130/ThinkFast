@@ -7,7 +7,6 @@ import Footer from "@/components/elements/Footer";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Loader from "@/components/elements/Loader";
-import LoadingBar from "@/components/elements/LoadingBar";
 
 const fredericka = Stardos_Stencil({
   subsets: ["latin"],
@@ -47,11 +46,7 @@ export default function RootLayout({
                 <ClerkLoading>
                   <Loader />
                 </ClerkLoading>
-                <ClerkLoaded>
-                  {" "}
-                  <LoadingBar />
-                  {children}
-                </ClerkLoaded>
+                <ClerkLoaded> {children}</ClerkLoaded>
                 <Footer />
               </div>
             </main>
