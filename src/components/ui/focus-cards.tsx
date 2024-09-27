@@ -97,7 +97,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
                 <Link href={`/play/${card.category}`} >
-                  <AlertDialogAction>Start Quiz</AlertDialogAction>
+                  <AlertDialogAction className="w-full">Start Quiz</AlertDialogAction>
                 </Link>
               </AlertDialogFooter>
             </AlertDialogContent>
