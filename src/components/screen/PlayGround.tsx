@@ -14,14 +14,8 @@ const PlayGround = ({ params }: PlayGroundProps) => {
   // Ensure params is treated as a number
   const categoryParam = Number(params);
 
-  // Debug: Log params and the card found
-  console.log("Category Param:", categoryParam);
-
   // Find the relevant card based on the category from the params
   const card = cards.find((item) => item.category === categoryParam);
-
-  // Debug: Log the card
-  console.log("Found Card:", card);
 
   // If no matching card is found, display a fallback UI
   if (!card) {
