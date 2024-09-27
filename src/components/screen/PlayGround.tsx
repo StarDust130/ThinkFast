@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useState } from "react";
 import { Label } from "../ui/label";
@@ -48,7 +49,7 @@ const PlayGround = () => {
           <Label>Select Difficulty:</Label>
           <Select
             value={selectedDifficulty}
-            onChange={(e) => setSelectedDifficulty(e.target.value)}
+            // onChange={(e) => setSelectedDifficulty(e.target.value)}
           >
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select difficulty" />
@@ -81,7 +82,7 @@ const PlayGround = () => {
           <Label>Question Type</Label>
           <Select
             value={selectedType}
-            onChange={(e) => setSelectedType(e.target.value)}
+            // onChange={(e) => setSelectedType(e.target.value)}
           >
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select Question Type" />
