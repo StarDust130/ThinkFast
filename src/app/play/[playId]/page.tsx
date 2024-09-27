@@ -5,11 +5,10 @@ export const metadata: Metadata = {
   title: "PlayGround",
   description: "PlayGround page",
 };
-const page = () => {
+const page = ({ params }: { params: { playId: number } }) => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-screen">
-      <h1 className="text-4xl font-bold">PlayGround page</h1>
-      <PlayGround />
+      <PlayGround params={params.playId} />
     </div>
   );
 };
