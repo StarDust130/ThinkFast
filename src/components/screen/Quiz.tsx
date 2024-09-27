@@ -12,8 +12,8 @@ function Quiz() {
 
   // Filter the cards based on the selected value
   const filterValue = cards.filter((card) => {
-    if (selected === "" || selected === "all") return true; 
-    return card.filterValue?.toLowerCase() === selected.toLowerCase(); 
+    if (selected === "" || selected === "all") return true;
+    return card.filterValue?.toLowerCase() === selected.toLowerCase();
   });
 
   return (

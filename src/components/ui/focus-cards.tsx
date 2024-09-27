@@ -15,7 +15,7 @@ import {
   AlertDialogHeader,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import PlayGround from "../screen/PlayGround";
+import Modal from "../screen/Modal";
 
 export const Card = React.memo(
   ({
@@ -70,8 +70,19 @@ type Card = {
   category: number;
 };
 
+interface Query {
+  difficulty: string;
+  numberOfQuestions: number;
+  type: string;
+}
+
 export function FocusCards({ cards }: { cards: Card[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [query, setQuery] = useState<Query>({
+    difficulty: "",
+    numberOfQuestions: 5,
+    type: "",
+  });
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
@@ -91,13 +102,17 @@ export function FocusCards({ cards }: { cards: Card[] }) {
             <AlertDialogContent>
               <AlertDialogHeader>
                 <AlertDialogDescription>
-                  <PlayGround />
+                  <Modal setQuery={setQuery} />
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <Link href={`/play/${card.category}`} >
-                  <AlertDialogAction className="w-full">Start Quiz</AlertDialogAction>
+                <Link
+                  href={`/play/${card.category}?difficulty=${query?.difficulty}&numberOfQuestions=${query?.numberOfQuestions}&type=${query?.type}`}
+                >
+                  <AlertDialogAction className="w-full">
+                    Start Quiz
+                  </AlertDialogAction>
                 </Link>
               </AlertDialogFooter>
             </AlertDialogContent>
