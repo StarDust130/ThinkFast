@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Header />
       <div className="flex flex-col justify-center items-center w-full h-screen">
-        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 z-50">
           <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-black to-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-sans py-2 md:py-10 relative z-20 font-bold ">
             Welcome to{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-b glow-light dark glow-effect-dark from-black to-white">

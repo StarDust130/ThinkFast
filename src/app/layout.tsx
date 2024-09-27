@@ -7,6 +7,7 @@ import Footer from "@/components/elements/Footer";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Loader from "@/components/elements/Loader";
+import LoadingBar from "@/components/elements/LoadingBar";
 
 const fredericka = Stardos_Stencil({
   subsets: ["latin"],
@@ -41,12 +42,16 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="min-h-screen flex flex-col">
-              <div className="min-h-screen w-full flex-grow ">
+            <main className="min-h-screen flex flex-col dark:bg-black dark:text-white">
+              <div className="min-h-screen w-full flex-grow  ">
                 <ClerkLoading>
                   <Loader />
                 </ClerkLoading>
-                <ClerkLoaded>{children}</ClerkLoaded>
+                <ClerkLoaded>
+                  {" "}
+                  <LoadingBar />
+                  {children}
+                </ClerkLoaded>
                 <Footer />
               </div>
             </main>
