@@ -80,7 +80,7 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom Navbar for Small Screens */}
-      <div className="fixed inset-x-0 bottom-0 flex justify-around p-3 shadow-lg lg:hidden border-t z-50 bg-white dark:bg-black">
+      <div className="fixed inset-x-0 bottom-0  flex justify-around p-3 shadow-lg lg:hidden border-t z-50 bg-white dark:bg-black">
         <Bottombar
           href="/dashboard"
           currentPath={currentPath}

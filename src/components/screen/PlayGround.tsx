@@ -32,14 +32,14 @@ const PlayGround = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 space-y-6">
-      {/* Header section */}
-
-      {/* Quiz settings */}
-      <div className="w-full max-w-lg  rounded-lg  p-6 space-y-6">
+    <div className="flex flex-col items-center justify-center p-6 space-y-6 ">
+      <div className="  rounded-3xl w-full  p-6 space-y-6">
         <div className="w-full flex-col flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold">Hello, {userName}!</h2>
-          <p className="text-center text-sm text-gray-600">
+          {/* Header section */}
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-pink-500">
+            Hello, {userName}!
+          </h2>
+          <p className="text-center text-sm ">
             Configure your quiz settings below.
           </p>
         </div>
@@ -66,9 +66,7 @@ const PlayGround = () => {
 
         {/* Number of Questions */}
         <div>
-          <Label className="block mb-1 text-lg font-semibold">
-            Number of Questions:
-          </Label>
+          <Label>Number of Questions:</Label>
           <Input
             type="number"
             value={numberOfQuestions}
@@ -95,20 +93,6 @@ const PlayGround = () => {
               ))}
             </SelectContent>
           </Select>
-        </div>
-
-        {/* Time Limit */}
-        <div>
-          <Label className="block mb-1 text-lg font-semibold">
-            Time Limit (in seconds):
-          </Label>
-          <Input
-            type="number"
-            value={timeLimit}
-            onChange={(e) => setTimeLimit(Number(e.target.value))}
-            min="1"
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
-          />
         </div>
       </div>
     </div>
